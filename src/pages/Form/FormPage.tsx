@@ -3,7 +3,7 @@ import cls from './FormPage.module.scss'
 import {AppLayout} from "@/components/AppLayout/AppLayout.tsx";
 import {Form} from "@/components/Form/Form.tsx";
 import {ChangeEvent, useState} from "react";
-import {Button, Input} from "@/shared";
+import {Button, Input, ThemeButton} from "@/shared";
 
 
 export const FormPage = () => {
@@ -24,7 +24,7 @@ export const FormPage = () => {
                     (<>
                         <h1 className={cls.title}>Сегодня <span style={{color: 'yellow'}}>{date}</span></h1>
                         <p className={cls.title}>Привет, {name}. Думаю это отличное начало)</p>
-                        <Button onClick={() => setShowPassword(!showPassword)}>Показать пароль</Button>
+                        <Button theme={showPassword ? ThemeButton.REVERSE : undefined} onClick={() => setShowPassword(!showPassword)}>{showPassword ? "Скрыть пароль" : "Показать пароль"}</Button>
                         {showPassword && <Input onInput={inputPassword} style={{width: '300px'}} className={cls.password} value={password}/>}
                     </>)
                     :
