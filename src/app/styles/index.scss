@@ -3,13 +3,16 @@
 @import "theme/dark";
 @import "theme/ligth";
 
-
 .app {
   // Глобальные стили
   background-color: var(--bg-color);
   color: var(--text-color);
+  font-family: "Roboto", sans-serif;
   font-size: var(--text-l);
   min-height: 100vh;
 }
 
+.center {
+  padding: 0 150px;
+}
 

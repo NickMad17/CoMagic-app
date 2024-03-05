@@ -1,3 +1,23 @@
 .home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.box{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.title {
+  font-size: var(--text-xxl);
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.text {
+  margin-top: 10px;
+  font-size: var(--text-l);
+  font-weight: 500;
 }

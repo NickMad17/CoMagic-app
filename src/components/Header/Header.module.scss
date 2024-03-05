@@ -1,7 +1,7 @@
 .header {
   background: var(--main-color);
   padding: 0 20px;
-  height: 80px;
+  height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,11 +9,19 @@
 
 .nav{
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
 .nav__link{
   font-size: var(--text-l);
+  font-weight: 500;
+  color: var(--text-color);
+  &:hover{
+    opacity: 0.7;
+  }
+  &:active{
+    color: var(--invert-text-color);
+  }
 }
 
 .active {

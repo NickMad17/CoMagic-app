@@ -1,0 +1,29 @@
+.Form {
+  padding: 40px;
+  width: 100%;
+  margin-top: 50px;
+  border-radius: 20px;
+  box-shadow: 1px 5px 10px 1px #009EE4;
+}
+
+.title {
+  font-size: var(--text-xl);
+  text-align: center;
+}
+
+.subtitle{
+  font-size: var(--text-l);
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-top: 30px;
+}
+
+.date {
+  &::-webkit-calendar-picker-indicator{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+  }
+}

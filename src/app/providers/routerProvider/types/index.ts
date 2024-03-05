@@ -1,4 +1,4 @@
 export enum Paths {
     HOME = "/",
-    FORM = "form"
+    FORM = "/form"
 }
