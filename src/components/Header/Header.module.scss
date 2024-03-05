@@ -1,0 +1,21 @@
+.header {
+  background: var(--main-color);
+  padding: 0 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav{
+  display: flex;
+  gap: 20px;
+}
+
+.nav__link{
+  font-size: var(--text-l);
+}
+
+.active {
+  color: #2c3fc7;
+}
