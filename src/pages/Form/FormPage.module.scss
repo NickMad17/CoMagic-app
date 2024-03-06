@@ -1,0 +1,17 @@
+.FormPage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: var(--text-xl);
+  margin-bottom: 20px;
+}
+
+.password {
+  width: 300px;
+  overflow-x: hidden;
+
+  margin-top: 15px;
+}
