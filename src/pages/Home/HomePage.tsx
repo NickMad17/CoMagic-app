@@ -1,19 +1,39 @@
-import cn from 'classnames'
-import cls from './HomePage.module.scss'
-import {AppLayout} from "@/components/AppLayout/AppLayout.tsx";
-import {Preview} from "@/shared/ui/Preview/Preview.tsx";
+import {useEffect, useState} from "react";
+import supabase from "@/app/config/supabase.ts";
+
+interface Products {
+    id: number;
+    product: string | null;
+    weight: string | null;
+}
 
 export const HomePage = () => {
+    const [products, setProducts] = useState<Products[] | null>(null)
+    useEffect(() => {
+        const fetch = async () => {
+            const {data, error} = await supabase
+                .from('products')
+                .select()
+
+            if (error) {
+                console.log(error)
+            }
+            if (data) {
+                console.log(data)
+                setProducts(data)
+            }
+        }
+        fetch()
+    }, []);
+
     return (
-        <AppLayout>
-            <div className={cn(cls.home)}>
-                <div className={cls.box}>
-                    <Preview/>
-                </div>
-                <h1 className={cls.title}>Home Page</h1>
-                <p className={cls.text}>Перейдите на страницу заполнения формы</p>
-            </div>
-        </AppLayout>
+        <div>
+            {products?.map(p => {
+                return (
+                    <h1 key={p.id}>{p.product}</h1>
+                )
+            })}
+        </div>
     );
 };
 
