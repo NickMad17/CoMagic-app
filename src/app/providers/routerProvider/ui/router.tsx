@@ -1,6 +1,7 @@
 import {createBrowserRouter} from "react-router-dom";
 import {Paths} from "../types";
-import {FormPage, HomePage} from "@/pages";
+import {HomePage} from "@/pages";
+import Messenger from "@/pages/Messenger/MessengerPage.tsx";
 
 export const router = createBrowserRouter([
     {
@@ -8,7 +9,7 @@ export const router = createBrowserRouter([
         element: <HomePage/>
     },
     {
-        path: Paths.FORM,
-        element: <FormPage/>
+        path: Paths.MESSENGER,
+        element: <Messenger/>
     },
 ])

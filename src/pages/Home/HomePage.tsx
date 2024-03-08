@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import supabase from "@/app/config/supabase.ts";
+import {AppLayout} from "@/shared";
 
 interface Products {
     id: number;
@@ -27,13 +28,13 @@ export const HomePage = () => {
     }, []);
 
     return (
-        <div>
+        <AppLayout>
             {products?.map(p => {
                 return (
                     <h1 key={p.id}>{p.product}</h1>
                 )
             })}
-        </div>
+        </AppLayout>
     );
 };
 

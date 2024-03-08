@@ -1,2 +1,8 @@
-export {FormPage} from "./Form/FormPage.tsx";
-export {HomePage} from "./Home/HomePage.tsx";
+import MessengerPage from "./Messenger/MessengerPage.tsx";
+import {HomePage} from "@/pages/Home/HomePage.tsx";
+
+
+export {
+    MessengerPage,
+    HomePage
+}
