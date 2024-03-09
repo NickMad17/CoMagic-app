@@ -9,6 +9,27 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      friends: {
+        Row: {
+          friend_id: string | null
+          id: number
+          status: boolean | null
+          user_id: string
+        }
+        Insert: {
+          friend_id?: string | null
+          id?: number
+          status?: boolean | null
+          user_id: string
+        }
+        Update: {
+          friend_id?: string | null
+          id?: number
+          status?: boolean | null
+          user_id?: string
+        }
+        Relationships: []
+      }
       products: {
         Row: {
           id: number
@@ -24,6 +45,45 @@ export type Database = {
           id?: number
           product?: string | null
           weight?: string | null
+        }
+        Relationships: []
+      }
+      users: {
+        Row: {
+          age: number | null
+          city: string | null
+          description: string | null
+          first_name: string | null
+          gender: string | null
+          hobbys: string[] | null
+          id: number
+          last_name: string | null
+          status: string | null
+          user_id: string
+        }
+        Insert: {
+          age?: number | null
+          city?: string | null
+          description?: string | null
+          first_name?: string | null
+          gender?: string | null
+          hobbys?: string[] | null
+          id?: number
+          last_name?: string | null
+          status?: string | null
+          user_id: string
+        }
+        Update: {
+          age?: number | null
+          city?: string | null
+          description?: string | null
+          first_name?: string | null
+          gender?: string | null
+          hobbys?: string[] | null
+          id?: number
+          last_name?: string | null
+          status?: string | null
+          user_id?: string
         }
         Relationships: []
       }

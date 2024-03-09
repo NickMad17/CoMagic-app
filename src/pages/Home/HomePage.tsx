@@ -1,6 +1,8 @@
-import {useEffect, useState} from "react";
-import supabase from "@/app/config/supabase.ts";
 import {AppLayout} from "@/shared";
+import {getProducts} from "@/pages/Home/api/productsApi.ts";
+import Products from "@/pages/Home/store/products.ts";
+import {useEffect} from "react";
+import {observer} from "mobx-react-lite";
 
 interface Products {
     id: number;
@@ -8,33 +10,20 @@ interface Products {
     weight: string | null;
 }
 
-export const HomePage = () => {
-    const [products, setProducts] = useState<Products[] | null>(null)
+export const HomePage = observer(() => {
     useEffect(() => {
-        const fetch = async () => {
-            const {data, error} = await supabase
-                .from('products')
-                .select()
-
-            if (error) {
-                console.log(error)
-            }
-            if (data) {
-                console.log(data)
-                setProducts(data)
-            }
-        }
-        fetch()
+        getProducts()
     }, []);
 
     return (
         <AppLayout>
-            {products?.map(p => {
+            {Products.products?.map(p => {
                 return (
                     <h1 key={p.id}>{p.product}</h1>
                 )
             })}
+            {Products.error}
         </AppLayout>
     );
-};
+});
 
