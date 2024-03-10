@@ -1,12 +1,12 @@
 @import "reset";
 @import "base/font";
-@import "theme/dark";
-@import "theme/ligth";
+@import "base/colors";
+@import "tailwind";
 
 .app {
   // Глобальные стили
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: #ffffff;
+  color: #000000;
   font-family: "Roboto", sans-serif;
   font-size: var(--text-l);
   min-height: 100vh;

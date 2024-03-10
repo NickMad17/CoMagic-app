@@ -29,8 +29,8 @@ export function AppLayout({children}: Props) {
                             }
                         },
                         {
-                            label: 'Messenger',
-                            key: 'Messenger',
+                            label: 'MessengerPage',
+                            key: 'MessengerPage',
                             onClick: () => {
                                 navigate(Paths.MESSENGER)
                             }

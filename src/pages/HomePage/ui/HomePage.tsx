@@ -1,16 +1,10 @@
 import {AppLayout} from "@/shared";
-import {getProducts} from "@/pages/Home/api/productsApi.ts";
-import Products from "@/pages/Home/store/products.ts";
+import {getProducts} from "../api/productsApi.ts";
+import Products from "../store/products.ts";
 import {useEffect} from "react";
 import {observer} from "mobx-react-lite";
 
-interface Products {
-    id: number;
-    product: string | null;
-    weight: string | null;
-}
-
-export const HomePage = observer(() => {
+ const HomePage = observer(() => {
     useEffect(() => {
         getProducts()
     }, []);
@@ -27,3 +21,4 @@ export const HomePage = observer(() => {
     );
 });
 
+export default HomePage

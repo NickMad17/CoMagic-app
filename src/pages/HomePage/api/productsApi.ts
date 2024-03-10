@@ -1,5 +1,5 @@
 import supabase from "@/app/config/supabase.ts";
-import Products from "@/pages/Home/store/products.ts";
+import Products from "../store/products.ts";
 export const getProducts = async () => {
         const {data, error} = await supabase
             .from('products')

@@ -37,8 +37,8 @@ const HeaderComponent = observer(() => {
         }
     }
     return (
-        <Header style={{background: '#fff', display: "flex", justifyContent: "space-between", alignItems: "center"}}>
-            <Button size='large' type='primary' onClick={login}>Login</Button>
+        <Header className="bg-white flex justify-between items-center">
+            <Button size='large' className='bg-primary' type='primary' onClick={login}>Login</Button>
             <Button size='large' onClick={logOut}>Log Out</Button>
             <Button onClick={signUp}>Sign up</Button>
         </Header>

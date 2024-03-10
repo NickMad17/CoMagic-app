@@ -1,7 +1,6 @@
 import {createBrowserRouter} from "react-router-dom";
+import {AuthPage, HomePage, MessengerPage, СonfirmEmailPage} from "@/pages";
 import {Paths} from "../types";
-import {HomePage} from "@/pages";
-import Messenger from "@/pages/Messenger/MessengerPage.tsx";
 
 export const router = createBrowserRouter([
     {
@@ -10,6 +9,14 @@ export const router = createBrowserRouter([
     },
     {
         path: Paths.MESSENGER,
-        element: <Messenger/>
+        element: <MessengerPage/>
+    },
+    {
+        path: Paths.AUTH,
+        element: <AuthPage/>
+    },
+    {
+        path: Paths.CONFIRM_EMAIL,
+        element: <СonfirmEmailPage/>
     },
 ])
