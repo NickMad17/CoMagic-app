@@ -13,7 +13,11 @@ import {observer} from "mobx-react-lite";
         <AppLayout>
             {Products.products?.map(p => {
                 return (
-                    <h1 key={p.id}>{p.product}</h1>
+                    <div className='border' key={p.id}>
+                        <h1>{p.id}</h1>
+                        <h2 >{p.first_name}</h2>
+                        <p>{p.last_name}</p>
+                    </div>
                 )
             })}
             {Products.error}

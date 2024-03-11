@@ -12,7 +12,6 @@ function AuthPage() {
                 </div>
             </div>
 
-            <h2 className='text-center text-[25px] font-medium mt-[6vh]'>Login to Acquaintance</h2>
             <AuthForm className='mt-[36px]'/>
         </Layout>
     );

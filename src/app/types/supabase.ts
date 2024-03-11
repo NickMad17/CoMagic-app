@@ -48,18 +48,17 @@ export type Database = {
         }
         Relationships: []
       }
-      users: {
+      profiles: {
         Row: {
           age: number | null
           city: string | null
           description: string | null
           first_name: string | null
           gender: string | null
-          hobbys: string[] | null
-          id: number
+          hobby: string[] | null
+          id: string
           last_name: string | null
           status: string | null
-          user_id: string
         }
         Insert: {
           age?: number | null
@@ -67,11 +66,10 @@ export type Database = {
           description?: string | null
           first_name?: string | null
           gender?: string | null
-          hobbys?: string[] | null
-          id?: number
+          hobby?: string[] | null
+          id: string
           last_name?: string | null
           status?: string | null
-          user_id: string
         }
         Update: {
           age?: number | null
@@ -79,13 +77,20 @@ export type Database = {
           description?: string | null
           first_name?: string | null
           gender?: string | null
-          hobbys?: string[] | null
-          id?: number
+          hobby?: string[] | null
+          id?: string
           last_name?: string | null
           status?: string | null
-          user_id?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "public_profiles_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          }
+        ]
       }
     }
     Views: {

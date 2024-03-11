@@ -8,13 +8,13 @@ interface IProduct {
 
 
 class Products {
-    products: IProduct[] | undefined | null = null;
+    products = null;
     error: string | null = null
     constructor() {
         makeAutoObservable(this);
     }
 
-    setProducts(products: IProduct[]) {
+    setProducts(products) {
         this.products = products
     }
     setError(error: string) {

@@ -1,9 +1,10 @@
 import User from "./store/User.ts";
-import {login} from "./Login/api/login.ts";
-import {registration} from "@/features/User/Registration/api/Registration.ts";
+import {login} from "./api/Login/login.ts";
+import {registration} from "@/features/User/api/Registration/Registration.ts";
 
 export {
     User,
     login,
-    registration
+    registration,
 }
+
