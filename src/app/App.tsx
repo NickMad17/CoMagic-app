@@ -7,6 +7,7 @@ import {AuthProvider} from "@/app/providers/AuthProvider";
 
 const App = () => {
 
+
     return (
         <div className={'app'}>
             <Suspense fallback={<Loader/>}>
