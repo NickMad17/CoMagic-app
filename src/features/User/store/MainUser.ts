@@ -3,7 +3,7 @@ import {Session} from "@supabase/supabase-js";
 
 // TODO: Убрать занос в локал стор (нужно лишь для отладки)
 
-class User {
+class MainUser {
     // @ts-ignore
     id:  | null | undefined = JSON.parse(localStorage.getItem('token'))?.user?.id || null
     data: Session | undefined | null = null
@@ -27,4 +27,4 @@ class User {
     }
 }
 
-export default new User()
+export default new MainUser()

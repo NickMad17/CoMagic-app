@@ -1,5 +1,5 @@
 import supabase from "@/app/config/supabase.ts";
-import User from "@/features/User/store/User.ts";
+import User from "@/features/User/store/MainUser.ts";
 
 export const userPostPublicDataBase = async (id: string | undefined, first_name: string, last_name: string) => {
     const {data, error} = await supabase

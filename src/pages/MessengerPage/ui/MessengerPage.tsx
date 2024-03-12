@@ -1,6 +1,6 @@
 import {AppLayout} from "@/shared";
 import {NewMessage} from "@/features/NewMessage";
-import {List} from "antd";
+import {UsersList} from "@/widget/UsrsList";
 
 
 const MessengerPage = () => {
@@ -9,7 +9,7 @@ const MessengerPage = () => {
     return (
         <AppLayout>
             <NewMessage/>
-            <List/>
+            <UsersList/>
         </AppLayout>
     );
 };

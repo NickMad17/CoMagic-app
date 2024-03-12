@@ -21,6 +21,14 @@ export const router = createBrowserRouter([
         )
     },
     {
+        path: Paths.PROFILE,
+        element: (
+            <ProtectedRoute>
+                <MessengerPage/>
+            </ProtectedRoute>
+        )
+    },
+    {
         path: Paths.AUTH,
         element: <AuthPage/>
     },

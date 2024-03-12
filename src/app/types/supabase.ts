@@ -30,24 +30,6 @@ export type Database = {
         }
         Relationships: []
       }
-      products: {
-        Row: {
-          id: number
-          product: string | null
-          weight: string | null
-        }
-        Insert: {
-          id?: number
-          product?: string | null
-          weight?: string | null
-        }
-        Update: {
-          id?: number
-          product?: string | null
-          weight?: string | null
-        }
-        Relationships: []
-      }
       profiles: {
         Row: {
           age: number | null

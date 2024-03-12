@@ -1,5 +1,5 @@
 import supabase from "@/app/config/supabase.ts";
-import User from "@/features/User/store/User.ts";
+import User from "@/features/User/store/MainUser.ts";
 import {userPostPublicDataBase} from "./userPostDataBase.ts";
 
 export const registration = async (email: string, password: string, first_name: string, last_name: string) => {

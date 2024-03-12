@@ -1,4 +1,4 @@
-import User from "./store/User.ts";
+import User from "./store/MainUser.ts";
 import {login} from "./api/Login/login.ts";
 import {registration} from "@/features/User/api/Registration/Registration.ts";
 

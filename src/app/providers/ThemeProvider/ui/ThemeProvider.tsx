@@ -18,6 +18,15 @@ const ThemeProvider = ({children}: Props) => {
                     Input: {
                         fontSize: 18,
                         paddingBlock: 9
+                    },
+                    Menu: {
+                        itemSelectedColor: '#fff',
+                        itemColor: '#fff',
+                        itemBg: 'transparent',
+                        itemHoverColor: '#fff',
+                        itemSelectedBg: '#6C70EB',
+                        itemHoverBg: 'rgba(108,112,235,0.78)',
+                        itemHeight: 50,
                     }
                 }
 
