@@ -1,14 +1,35 @@
 import {createBrowserRouter} from "react-router-dom";
+import {AuthPage, HomePage, MessengerPage} from "@/pages";
 import {Paths} from "../types";
-import {FormPage, HomePage} from "@/pages";
+import ProtectedRoute from "@/app/providers/routerProvider/ui/ProtectedRoute.tsx";
 
 export const router = createBrowserRouter([
     {
         path: Paths.HOME,
-        element: <HomePage/>
+        element: (
+            <ProtectedRoute>
+                <HomePage/>
+            </ProtectedRoute>
+        )
     },
     {
-        path: Paths.FORM,
-        element: <FormPage/>
+        path: Paths.MESSENGER,
+        element: (
+            <ProtectedRoute>
+                <MessengerPage/>
+            </ProtectedRoute>
+        )
+    },
+    {
+        path: Paths.PROFILE,
+        element: (
+            <ProtectedRoute>
+                <MessengerPage/>
+            </ProtectedRoute>
+        )
+    },
+    {
+        path: Paths.AUTH,
+        element: <AuthPage/>
     },
 ])

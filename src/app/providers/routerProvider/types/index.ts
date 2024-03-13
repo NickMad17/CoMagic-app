@@ -1,4 +1,6 @@
 export enum Paths {
+    AUTH = '/auth',
+    PROFILE = '/profile',
     HOME = "/",
-    FORM = "/form"
+    MESSENGER = '/messenger'
 }
