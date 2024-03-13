@@ -3,13 +3,19 @@
 @import "base/colors";
 @import "tailwind";
 
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) #FFFFFF;
+}
+
 .app {
   // Глобальные стили
   background-color: #fff;
   color: #000000;
   font-family: "Roboto", sans-serif;
   font-size: var(--text-l);
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .center {
