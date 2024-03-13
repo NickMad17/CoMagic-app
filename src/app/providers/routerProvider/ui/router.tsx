@@ -1,9 +1,9 @@
-import {createBrowserRouter} from "react-router-dom";
+import {createHashRouter} from "react-router-dom";
 import {AuthPage, HomePage, MessengerPage} from "@/pages";
 import {Paths} from "../types";
 import ProtectedRoute from "@/app/providers/routerProvider/ui/ProtectedRoute.tsx";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     {
         path: Paths.HOME,
         element: (
@@ -32,4 +32,8 @@ export const router = createBrowserRouter([
         path: Paths.AUTH,
         element: <AuthPage/>
     },
+    {
+        path: Paths.ERROR,
+        element: <p>Error</p>
+    }
 ])
