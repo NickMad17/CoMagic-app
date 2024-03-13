@@ -36,4 +36,4 @@ const UsersList = observer(() => {
     )
 });
 
-export default UsersList;S
+export default UsersList;
