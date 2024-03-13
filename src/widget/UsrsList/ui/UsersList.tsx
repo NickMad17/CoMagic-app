@@ -1,36 +1,39 @@
-import {useEffect} from 'react';
-import {Avatar, List} from "antd";
-import UsersStore from ".././store/UsersStore.ts";
+import {useEffect} from "react";
 import {getUsersList} from "@/widget/UsrsList/api/usersListApi.ts";
 import {observer} from "mobx-react-lite";
-import {Loader} from "@/shared";
+import UsersStore from '.././store/UsersStore.ts'
+import {Table} from "antd";
 
 const UsersList = observer(() => {
-
+    const columns = [
+        {
+            title: "Name",
+            dataIndex: "name",
+            key: "name",
+        },
+        {
+            title: "Age",
+            dataIndex: "age",
+            key: "age",
+        },
+        {
+            title: "Address",
+            dataIndex: "address",
+            key: "address",
+        },
+    ];
     useEffect(() => {
-        getUsersList()
+        getUsersList();
     }, []);
     return (
         <>
-            {UsersStore.users && !UsersStore.loading && (
-                <List
-                    itemLayout="horizontal"
-                    dataSource={UsersStore.users}
-                    renderItem={(user, index) => (
-                        <List.Item>
-                            <List.Item.Meta
-                                avatar={<Avatar src={`https://api.dicebear.com/7.x/miniavs/svg?seed=${index}`}/>}
-                                title={<p>{user.last_name} {user.first_name}</p>}
-                                description={user.status}
-                            />
-                        </List.Item>
-                    )}
-                />
-            )}
-            {UsersStore.error && <p>{UsersStore.error}</p>}
-            {UsersStore.loading && <Loader/>}
+            {
+                UsersStore.users && !UsersStore.loading && (
+                    <Table columns={columns} dataSource={UsersStore.users}/>
+                )
+            }
         </>
     )
-})
+});
 
-export default UsersList;
+export default UsersList;S

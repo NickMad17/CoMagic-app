@@ -61,7 +61,7 @@ const SideBar = () => {
                             label: 'Settings',
                             icon: <SettingFilled/>,
                             key: 'Settings',
-                            onClick: () => logOut
+                            onClick: () => logOut()
                         }
                     ]}/>
                 </div>

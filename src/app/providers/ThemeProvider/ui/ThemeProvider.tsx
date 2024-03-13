@@ -12,7 +12,8 @@ const ThemeProvider = ({children}: Props) => {
                 token: {
                     colorPrimary: '#6C70EB',
                     fontSize: 16,
-                    borderRadius: 4
+                    borderRadius: 4,
+                    colorBgBase: '#fff'
                 },
                 components: {
                     Input: {
@@ -27,6 +28,9 @@ const ThemeProvider = ({children}: Props) => {
                         itemSelectedBg: '#6C70EB',
                         itemHoverBg: 'rgba(108,112,235,0.78)',
                         itemHeight: 50,
+                    },
+                    Layout: {
+                        bodyBg: '#fff',
                     }
                 }
 
